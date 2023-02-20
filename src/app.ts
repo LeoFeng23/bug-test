@@ -1,9 +1,25 @@
-import { createApp } from 'vue'
-import './app.scss'
+import { createApp } from 'vue';
+import { setupStore, useSystem } from '@/stores';
+
+import '@nutui/nutui-taro/dist/style.css';
+import './app.scss';
 
 const App = createApp({
-  onShow (options) {},
-  // 入口组件不需要实现 render 方法，即使实现了也会被 taro 所覆盖
-})
+  // 可以使用所有的 Vue 生命周期方法
+  // 对应 onLaunch
+  onLaunch(options) {
+    // 将启动参数放进到全局去
+    const system = useSystem();
+    system.init(options);
+  },
 
-export default App
+  // 对应 onShow
+  onShow(options) {
+  },
+});
+
+
+// 启用pinia
+setupStore(App);
+
+export default App;

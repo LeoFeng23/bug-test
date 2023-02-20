@@ -1,0 +1,31 @@
+@import './assets/styles/index.scss';
+
+// 取消自定义表单表单项之间的横线
+.custom-order-style {
+  .nut-cell-group .nut-cell::after {
+    border: none;
+  }
+}
+
+// 全局样式修改
+.custom-style {
+
+  font-size: 14px;
+
+  .nut-input .input-text {
+    &::placeholder {
+      color: #c8c9cc !important;
+    }
+    min-height: 28px !important;
+    line-height: 20px !important;
+    position: relative;
+    top: -4px;
+  }
+
+  .nut-textarea .nut-textarea__textarea {
+    &::placeholder {
+      color: #c8c9cc !important;
+      line-height: 20px;
+    }
+  }
+}

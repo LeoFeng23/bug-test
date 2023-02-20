@@ -3,5 +3,6 @@
   "projectname": "bug-test",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "2.30.0"
 }
