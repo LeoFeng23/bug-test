@@ -7,8 +7,7 @@
           :key="field.formItemCode"
           :label="field.formFieldProperties.label"
         >
-          <component :is="getFormItemComponent(field)" v-model="testFields[field.formItemCode]" :field="field" />
-          <!-- <input v-model="field.value"> -->
+          <nut-input v-model="field.value" />
         </nut-form-item>
       </view>
     </nut-form>
