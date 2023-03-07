@@ -7,27 +7,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AdminField: typeof import('./src/components/form/admin-field/index.vue')['default']
-    AttachmentField: typeof import('./src/components/form/attachment-field/index.vue')['default']
-    BottomToolbar: typeof import('./src/components/business/custom-order/bottom-toolbar.vue')['default']
-    Card: typeof import('./src/components/base/card/index.vue')['default']
-    CustomForm: typeof import('./src/components/business/custom-form/index.vue')['default']
-    CustomOrder: typeof import('./src/components/business/custom-order/index.vue')['default']
-    DateTimeField: typeof import('./src/components/form/date-time-field/index.vue')['default']
     DefaultLayout: typeof import('./src/components/layouts/default-layout/index.vue')['default']
-    ImageField: typeof import('./src/components/form/image-field/index.vue')['default']
-    InputField: typeof import('./src/components/form/input-field/index.vue')['default']
-    InputNumberField: typeof import('./src/components/form/input-number-field/index.vue')['default']
-    NutButton: typeof import('@nutui/nutui-taro')['Button']
+    Layout: typeof import('./src/components/layout.vue')['default']
     NutConfigProvider: typeof import('@nutui/nutui-taro')['ConfigProvider']
-    NutForm: typeof import('@nutui/nutui-taro')['Form']
-    NutFormItem: typeof import('@nutui/nutui-taro')['FormItem']
-    NutInput: typeof import('@nutui/nutui-taro')['Input']
-    NutInputNumber: typeof import('@nutui/nutui-taro')['InputNumber']
-    NutTextarea: typeof import('@nutui/nutui-taro')['Textarea']
-    SelectField: typeof import('./src/components/form/select-field/index.vue')['default']
-    SignatureField: typeof import('./src/components/form/signature-field/index.vue')['default']
-    TextareaField: typeof import('./src/components/form/textarea-field/index.vue')['default']
-    TreeField: typeof import('./src/components/form/tree-field/index.vue')['default']
+    NutTabbar: typeof import('@nutui/nutui-taro')['Tabbar']
+    NutTabbarItem: typeof import('@nutui/nutui-taro')['TabbarItem']
+    TabLayout: typeof import('./src/components/layouts/tab-layout/index.vue')['default']
+    TestSlot: typeof import('./src/components/test-slot.vue')['default']
   }
 }

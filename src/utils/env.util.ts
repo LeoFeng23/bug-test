@@ -34,6 +34,14 @@ export const isDD = () => {
 };
 
 /**
+ * 是否是微信环境
+ * @returns Boolean
+ */
+export const isWeixin = () => {
+  return process.env.TARO_ENV === APP_TYPE.WX;
+};
+
+/**
  * 是否是钉钉环境
  * @returns Boolean
  */

@@ -8,13 +8,24 @@ export interface Options {
   referrerInfo: object;
 }
 
+export enum ClientEnum {
+  // 管理端
+  MANAGE = 'manage',
+  // 员工端
+  EMPLOYEE = 'employee',
+  // 未登录
+  NONE = 'none'
+}
+
 const useSystem = defineStore({
   /** 区分不通状态的唯一标识 */
   id: 'system',
   /** 状态 */
   state: () => ({
     options: {} as Options,
-    token: ''
+    token: '',
+    theme: 'light',
+    clientType: ClientEnum.NONE
   }),
   actions: {
     init(options: Options) {

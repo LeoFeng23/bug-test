@@ -26,6 +26,8 @@ export const getDomInfo = (selector: string): Promise<DOMRect[]> =>
     // 使用setTimeout包裹是因为飞书和微信环境下在useReady中无法直接查询
     setTimeout(() => {
       const query = Taro.createSelectorQuery();
-      query.select(selector).boundingClientRect().exec(resolve);
+      if (typeof selector === 'string') {
+        query.select(selector).boundingClientRect().exec(resolve);
+      }
     });
   });

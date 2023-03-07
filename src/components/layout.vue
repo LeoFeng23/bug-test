@@ -1,5 +1,8 @@
 <template>
-  <nut-input :border="false" />
+
+  <view>
+    <slot></slot>
+  </view>
 </template>
 
 <script lang="ts" setup>
