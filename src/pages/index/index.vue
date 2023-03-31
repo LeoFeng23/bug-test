@@ -1,23 +1,13 @@
 <template>
-  <view>被NutConfigProvider包裹</view>
-  <NutConfigProvider>
-    <layout>
-      <test-slot>
-        <template #test="propName">
-          test slot: {{ propName }}
-        </template>
-      </test-slot>
-    </layout>
-  </NutConfigProvider>
-  <view>未被NutConfigProvider包裹</view>
-  <layout>
-      <test-slot>
-        <template #test="propName">
-          test slot: {{ propName }}
-        </template>
-      </test-slot>
-    </layout>
+  测试使用alova
 </template>
 
 <script lang="ts" setup>
+import { createAlova } from 'alova';
+import AdapterTaro from '@alova/adapter-taro';
+
+const alovaInstacne = createAlova({
+  baseURL: '/',
+  ...AdapterTaro(),
+});
 </script>
