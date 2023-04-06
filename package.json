@@ -30,7 +30,7 @@
   ],
   "author": "",
   "dependencies": {
-    "@alova/adapter-taro": "^1.1.1",
+    "@alova/adapter-taro": "^1.2.0",
     "@babel/runtime": "^7.7.7",
     "@nutui/icons-vue-taro": "^0.0.8",
     "@nutui/nutui-taro": "^4.0.0",
@@ -53,7 +53,7 @@
     "@tarojs/service": "3.6.1",
     "@tarojs/shared": "3.6.1",
     "@tarojs/taro": "3.6.1",
-    "alova": "^2.0.11",
+    "alova": "^2.0.14",
     "echarts": "^5.4.1",
     "lodash-es": "^4.17.21",
     "number-precision": "^1.6.0",

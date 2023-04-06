@@ -4,7 +4,7 @@ overrides:
   '@swc/core': 1.3.42
 
 specifiers:
-  '@alova/adapter-taro': ^1.1.1
+  '@alova/adapter-taro': ^1.2.0
   '@babel/core': ^7.8.0
   '@babel/runtime': ^7.7.7
   '@commitlint/cli': ^17.4.2
@@ -40,7 +40,7 @@ specifiers:
   '@vue/compiler-sfc': ^3.0.0
   '@vue/eslint-config-prettier': ^7.0.0
   '@vue/eslint-config-typescript': ^11.0.2
-  alova: ^2.0.11
+  alova: ^2.0.14
   babel-loader: ^9.1.2
   babel-plugin-import: ^1.13.6
   babel-preset-taro: 3.6.1
@@ -72,7 +72,7 @@ specifiers:
   webpack: 5.69.0
 
 dependencies:
-  '@alova/adapter-taro': 1.1.1
+  '@alova/adapter-taro': 1.2.0
   '@babel/runtime': 7.21.0
   '@nutui/icons-vue-taro': 0.0.8
   '@nutui/nutui-taro': 4.0.4_6mnpj4rz4uj2wyw5pkeegg35sa
@@ -95,7 +95,7 @@ dependencies:
   '@tarojs/service': 3.6.1_vue@3.2.47
   '@tarojs/shared': 3.6.1
   '@tarojs/taro': 3.6.1_vue@3.2.47
-  alova: 2.0.11
+  alova: 2.0.14
   echarts: 5.4.2
   lodash-es: 4.17.21
   number-precision: 1.6.0
@@ -143,8 +143,8 @@ devDependencies:
 
 packages:
 
-  /@alova/adapter-taro/1.1.1:
-    resolution: {integrity: sha512-7puBf7/f2B5b0rC8XB5Og8esK0mlCeSWP28iaxd4RcLneQaGMLex/mSdUddkEHDOhtyhPZNaw5dd+TqfrM3bSw==}
+  /@alova/adapter-taro/1.2.0:
+    resolution: {integrity: sha512-6s2JYT+BuZXKY2cp9PnlJmSgJfOXpcU4+3/oedGhLnod1nii0JpYciHbM3xICVAAh3cdxn0r1dCjb4kyyTSblg==}
     dev: false
 
   /@ampproject/remapping/2.2.0:
@@ -3677,8 +3677,8 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /alova/2.0.11:
-    resolution: {integrity: sha512-R1nkNjx/oo9EE3aqUyLA9sw+cUj/7tlHsXeuaegNct/gmQtNlSNrUtFY4uCIedI36nVCaIrN+tEKgd+AnrMZVg==}
+  /alova/2.0.14:
+    resolution: {integrity: sha512-/yNLf32jG4MS8qN2h7FsPEzNI5T+6Rw+/Mllc/fkrwUCeqw9CurXrfreyaHURB578rM6WDCC0NDDRQOt64moCQ==}
     engines: {node: '>= 0.12.0'}
     dev: false
 
