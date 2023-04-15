@@ -1,0 +1,59 @@
+@import "./custom_theme.scss";
+
+// 钉钉小程序css变量预置样式兼容
+.dd-layout {
+  // 兼容dd环境下，input输入框placeholder与输入的内容不对齐的问题
+  .input-placeholder {
+    margin-left: -4px;
+  }
+
+  .nut-button--default {
+    background: $button-default-bg-color;
+    border: $button-border-width solid $button-default-border-color;
+  }
+
+  .nut-button--primary {
+    background: $button-primary-background-color;
+    color: $button-primary-color;
+    border-color: $primary-color;
+  }
+
+  .nut-button--round {
+    border-radius: $button-border-radius;
+  }
+
+  .nut-form-item__label {
+    margin-right: $form-item-label-margin-right;
+    width: $form-item-label-width;
+  }
+
+  .nut-cell {
+    padding: $cell-padding;
+    color: $cell-color;
+  }
+
+  .nut-theme-dark .nut-input {
+    background: $dark-background;
+  }
+
+  .nut-tabs__titles-item.active .nut-tabs__titles-item__line {
+    background: $tabs-horizontal-tab-line-color;
+  }
+
+  .nut-radio__icon,
+  .nut-checkbox__icon,
+  .nut-checkbox__icon--indeterminate {
+    color: $primary-color;
+  }
+
+  .nut-form-item__body__tips {
+    font-size: $form-item-tip-font-size;
+    color: $form-item-error-message-color;
+  }
+
+  // 按钮触发的背景色
+  .nut-button--primary:not([disabled]):active {
+    color: $button-primary-color;
+    background: $button-primary-background-color;
+  }
+}

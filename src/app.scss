@@ -1,1 +1,59 @@
 @import './assets/styles/index.scss';
+
+// 全局样式修改
+.custom-style {
+
+  font-size: 14px;
+
+  .nut-input .input-text {
+    // H5环境下placeholder样式
+    &::placeholder {
+      color: #c8c9cc !important;
+    }
+
+    min-height: 28px !important;
+    line-height: 20px !important;
+  }
+
+  // 小程序placeholder颜色
+  .nut-theme-dark {
+    .input-placeholder, .textarea-placeholder {
+      color: $dark-placeholder-color;
+    }
+  }
+
+  .input-placeholder, .textarea-placeholder {
+    color: $placeholder-color;
+  }
+
+  .nut-textarea .nut-textarea__textarea {
+    &::placeholder {
+      color: #c8c9cc !important;
+      line-height: 20px;
+    }
+  }
+
+  // 取消input上移
+  .normal-input-position {
+    top: 0 !important;
+  }
+}
+
+
+.nut-input, .nut-textarea__textarea {
+  color: $input-text-color;
+}
+
+.nut-popup {
+  box-sizing: border-box;
+}
+
+// 修改必填标记位置，不占用表单项空间
+.nut-form-item__label.required {
+  &::before {
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 9px;
+  }
+}

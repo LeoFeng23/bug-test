@@ -1,0 +1,21 @@
+.loading-page-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 68px;
+  background-color: #fff;
+  font-size: 14px;
+  .loading-img {
+    width: 260px;
+  }
+  .loading-info {
+    margin-top: 16px;
+    line-height: 20px;
+    text-align: center;
+    .loading-title {
+      margin: 10px 0;
+      color: #969799;
+    }
+  }
+}

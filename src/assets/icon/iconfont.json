@@ -1,0 +1,37 @@
+{
+  "id": "3908727",
+  "name": "易盘点",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "34216699",
+      "name": "消息@1x",
+      "font_class": "a-xiaoxi1x",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "34216700",
+      "name": "我的@1x",
+      "font_class": "a-wode1x",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "34216701",
+      "name": "首页@1x",
+      "font_class": "a-shouye1x",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "34216703",
+      "name": "工作台@1x",
+      "font_class": "a-gongzuotai1x",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    }
+  ]
+}

@@ -1,14 +1,17 @@
-// eslint-disable-next-line no-undef
+// url:https://taro-docs.jd.com/docs/app-config
+import Taro from '@tarojs/taro';
+
+declare const defineAppConfig: (config: Taro.Config) => Taro.Config;
+
 export default defineAppConfig({
   pages: [
-    'pages/index/index',
+    'pages/common/loading/index',
   ],
   window: {
     backgroundColor: '#fff',
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: '易盘点-固定资产管理专家',
+    navigationBarTitleText: '易',
     navigationBarTextStyle: 'black',
   },
-  darkmode: true
-})
+});

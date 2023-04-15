@@ -1,4 +1,5 @@
 import Components from 'unplugin-vue-components/webpack';
+import NutUIResolver from '@nutui/nutui-taro/dist/resolver';
 const path = require('path');
 const args = process.argv;
 const isOpenDevTools = args.includes('--devtools');
@@ -13,24 +14,12 @@ const outputRootStrtegy = {
 const env = process.env.npm_lifecycle_event.split(':')[1];
 const outputRoot = outputRootStrtegy[env];
 
-const NutUIResolver = () => {
-  return name => {
-    if (name.startsWith('Nut')) {
-      const partialName = name.slice(3);
-      return {
-        name: partialName,
-        from: '@nutui/nutui-taro',
-        sideEffects: `@nutui/nutui-taro/dist/packages/${partialName.toLowerCase()}/style`,
-      };
-    }
-  };
-};
-
 const pluginList = [
   '@tarojs/plugin-html',
   '@tarojs/plugin-platform-alipay-dd',
   '@tarojs/plugin-platform-lark',
   'taro-plugin-pinia',
+  '@tarojs/plugin-http',
 ];
 
 if (isOpenDevTools) {
@@ -45,7 +34,7 @@ const config = {
   cache: {
     enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
-  projectName: 'bug-test',
+  projectName: 'YpdMobile',
   date: '2023-01-05',
   designWidth: 375,
   deviceRatio: {
@@ -76,18 +65,41 @@ const config = {
     },
   },
   framework: 'vue3',
+  // h5: {
+  //   webpackChain(chain, webpack) {
+  //     config.module.rule('babel')
+  //       .test(/\.(js|ts)$/)
+  //       .use('babel-loader')
+  //         .loader('babel-loader')
+  //         .options({
+  //           presets: [
+  //             [
+  //               'taro',
+  //               {
+  //                 framework: 'vue3',
+  //                 ts: true,
+  //                 useBuiltIns: 'usage'
+  //               },
+  //             ],
+  //           ],
+  //           plugins: [
+  //             ["@babel/plugin-proposal-class-properties", { "loose": false }]
+  //           ]
+  //         });
+  //   },
+  // },
   mini: {
     webpackChain(chain) {
       chain.plugin('unplugin-vue-components').use(
         Components({
-          resolvers: [NutUIResolver()],
+          resolvers: [NutUIResolver({ taro: true })],
         })
       );
       chain.merge({
         module: {
           rule: [
             {
-              test: /.js$/,
+              test: /\.(js|ts)$/,
               loader: 'babel-loader',
             },
           ],
@@ -102,7 +114,8 @@ const config = {
       url: {
         enable: true,
         config: {
-          limit: 1024, // 设定转换尺寸上限
+          // 上限设置为2k，兼容飞书小程序
+          limit: 2048, // 设定转换尺寸上限
         },
       },
       cssModules: {
@@ -113,18 +126,25 @@ const config = {
         },
       },
     },
+    // prerender: {
+    //   match: 'pages/**'
+    // }
   },
   h5: {
     webpackChain(chain) {
       chain.plugin('unplugin-vue-components').use(
         Components({
-          resolvers: [NutUIResolver()],
+          resolvers: [NutUIResolver({ taro: true })],
         })
       );
     },
-    publicPath: '/',
+    publicPath: '/phone',
     staticDirectory: 'static',
     esnextModules: ['nutui-taro', 'icons-vue-taro'],
+    router: {
+      mode: 'browser',
+      basename: '/phone',
+    },
     postcss: {
       autoprefixer: {
         enable: true,
@@ -135,6 +155,17 @@ const config = {
         config: {
           namingPattern: 'module', // 转换模式，取值为 global/module
           generateScopedName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    },
+    devServer: {
+      proxy: {
+        '/api': {
+          target: '/',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/api': '',
+          },
         },
       },
     },

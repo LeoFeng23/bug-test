@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>撤销</title>
+    <g id="-----📂审批详情V1.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="待审批单据详情-既是单据审批人又是发起人-light" transform="translate(-170.000000, -1220.000000)">
+            <g id="表单:20/Button按钮:50/模块按钮L-Copy" transform="translate(0.000000, 1208.000000)">
+                <g id="06.底部栏/按钮栏/基础组件/图标按钮" transform="translate(168.000000, 12.000000)">
+                    <g id="撤销" transform="translate(2.000000, 0.000000)">
+                        <rect id="矩形" x="0" y="0" width="20" height="20"></rect>
+                        <g id="编组" transform="translate(2.000000, 2.000000)" stroke="#323233" stroke-linejoin="round" stroke-width="1.61052632">
+                            <path d="M0,0.888888889 C0,0.397968889 0.400587105,0 0.894736842,0 L6.26315789,0 L8.5,2.66666667 L16.1052632,2.66666667 C16.5994263,2.66666667 17,3.06462222 17,3.55555556 L17,15.1111111 C17,15.6020444 16.5994263,16 16.1052632,16 L0.894736842,16 C0.400587105,16 0,15.6020444 0,15.1111111 L0,0.888888889 Z" id="路径"></path>
+                            <polyline id="路径" stroke-linecap="round" points="7.15789474 7.55555556 4.92105263 9.77777778 7.15789474 12"></polyline>
+                            <polyline id="路径" stroke-linecap="round" points="4.92105263 9.77777778 12.0789474 9.77777778 12.0789474 7.11111111"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
